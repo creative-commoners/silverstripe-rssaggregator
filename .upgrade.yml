@@ -1,0 +1,5 @@
+mappings:
+  RSSAggEntry: Silverstripe\RSSAggregator\RSSAggEntry
+  RSSAggregatingPage: Silverstripe\RSSAggregator\RSSAggregationPage
+  RSSAggregatingPage_Controller: PageController
+  RSSAggSource: Silverstripe\RSSAggregator\RSSAggSource

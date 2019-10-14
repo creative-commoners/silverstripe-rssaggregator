@@ -1,0 +1,29 @@
+###############################################
+RSS Aggregator Module
+###############################################
+
+Maintainer Contact
+-----------------------------------------------
+Sam Minnée (Nickname: sminnee)
+<sam (at) silverstripe (dot) com>
+
+Requirements
+-----------------------------------------------
+Silverstripe 4
+
+Documentation
+-----------------------------------------------
+http://doc.silverstripe.com/doku.php?id=modules:rssaggregator
+(use archive.org)
+
+Installation Instructions
+-----------------------------------------------
+use composer
+
+Usage Overview
+-----------------------------------------------
+
+Known issues:
+-----------------------------------------------
+
+
