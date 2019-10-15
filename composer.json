@@ -1,17 +1,25 @@
 {
-	"name": "silverstripe/rssaggregator",
-	"description": "Aggregate multipe RSS feeds into a single source with Silverstripe",
-	"type": "silverstripe-vendormodule",
-	"keywords": ["silverstripe", "rss"],
-	"authors": [
-		{
-			"name": "Sam Minnée",
-			"email": "sam@silverstripe.com"
-		}
+  "name": "silverstripe/rssaggregator",
+  "description": "Aggregate multipe RSS feeds into a single source with Silverstripe",
+  "type": "silverstripe-vendormodule",
+  "keywords": [
+    "silverstripe",
+    "rss"
+  ],
+  "authors": [
+    {
+      "name": "Sam Minnée",
+      "email": "sam@silverstripe.com"
+    }
   ],
   "require": {
     "silverstripe/cms": "^4",
     "simplepie/simplepie": "^1.3"
-	},
-	"minimum-stability": "dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Silverstripe\\RSSAggregator\\": "src"
+    }
+  },
+  "minimum-stability": "dev"
 }
