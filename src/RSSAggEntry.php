@@ -15,21 +15,21 @@ use Silverstripe\RSSAggregator\RSSAggSource;
 
 
 class RSSAggEntry extends DataObject {
-	public static $has_one = array(
+	private static $has_one = array(
 		"Page" => RSSAggregationPage::class,
 		"Source" => RSSAggSource::class,
 	);
 
-	public static $db = array(
+	private static $db = array(
 		"Displayed" => DBBoolean::class,
-		"Date" => "SSDatetime",
+		"Date" => "DBDatetime",
 		"Title" => "Varchar(255)",
 		"Content" => "HTMLText",
 		"Permalink" => "Varchar(255)",
 		"EnclosureURL" => "Varchar(255)",
 	);
 
-	public static $casting = array(
+	private static $casting = array(
 		"PlainContentSummary" => "Text",
 	);
 
