@@ -6,6 +6,9 @@ use SilverStripe\ORM\DataObject;
 use Silverstripe\RSSAggregator\RSSAggregationPage;
 
 class RSSAggSource extends DataObject {
+
+    private static $table_name = 'RSSAggSource';
+
 	private static $has_one = array(
 		"Page" => RSSAggregationPage::class,
 	);

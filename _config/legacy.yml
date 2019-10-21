@@ -1,0 +1,8 @@
+---
+Name: rssaggregatorlegacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    RSSAggEntry: Silverstripe\RSSAggregator\RSSAggEntry
+    RSSAggregatingPage: Silverstripe\RSSAggregator\RSSAggregationPage
+    RSSAggSource: Silverstripe\RSSAggregator\RSSAggSource

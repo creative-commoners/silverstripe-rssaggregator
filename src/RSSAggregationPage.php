@@ -24,6 +24,8 @@ use SimplePie;
  */
 class RSSAggregationPage extends Page {
 
+    private static $table_name = 'RSSAggregationPage';
+
 	private static $db = array (
 		"NumberOfItems" => "Int"
 	);

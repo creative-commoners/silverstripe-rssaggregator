@@ -15,6 +15,9 @@ use Silverstripe\RSSAggregator\RSSAggSource;
 
 
 class RSSAggEntry extends DataObject {
+
+    private static $table_name = 'RSSAggEntry';
+
 	private static $has_one = array(
 		"Page" => RSSAggregationPage::class,
 		"Source" => RSSAggSource::class,
