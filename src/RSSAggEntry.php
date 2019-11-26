@@ -44,7 +44,7 @@ class RSSAggEntry extends DataObject
     public function populateDefaults()
     {
         parent::populateDefaults();
-        if (!RSSAggregatingPage::get_moderation_required()) {
+        if (!RSSAggregationPage::config()->get('moderation_required')) {
             $this->Displayed = true;
         }
     }
