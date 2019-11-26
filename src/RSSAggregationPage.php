@@ -3,7 +3,6 @@
 namespace SilverStripe\RSSAggregator;
 
 use Page;
-use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Convert;
@@ -47,7 +46,7 @@ class RSSAggregationPage extends Page
             "RSSFeed" => "RSSFeedSource"
         ));
 
-        $gridField = new GridField(
+        $gridField = GridField::create(
             RSSAggSource::class,
             'SourceFeeds',
             $this->SourceFeeds(),
@@ -64,10 +63,7 @@ class RSSAggregationPage extends Page
      */
     public function updateRSS()
     {
-
-        require_once(Director::baseFolder() . '/rssaggregator/thirdparty/simplepie/autoloader.php');
-
-        $cache = Director::baseFolder() . '/assets/.cache';
+        $cache = ASSETS_PATH . DIRECTORY_SEPARATOR . '.rss_cache';
 
         if (!file_exists($cache)) {
             mkdir($cache);
@@ -182,20 +178,11 @@ class RSSAggregationPage extends Page
     {
         $this->updateRSS();
 
-        // Tack the RSS feed children to the end of the children provided by the RSS feed
-        $c1 = DataObject::get(SiteTree::class, "\"ParentID\" = '$this->ID'");
-        $c2 = DataObject::get(RSSAggEntry::class, "\"PageID\" = $this->ID AND \"Displayed\" = 1", "\"Date\" ASC");
-
-        $set = new ArrayList();
-
-        if ($c1) {
-            if ($c2) {
-                $set->push($c2);
-            }
-            return $set->push($c1);
-        } else {
-            return $c2;
-        }
+        // Tack the RSS feed children to the end of the Page children
+        /** @var ArrayList $children */
+        $children = $this->Children();
+        $children->merge($this->Entries()->filter('Displayed', 1)->sort('Date', 'ASC'));
+        return $children;
     }
 
     /*
