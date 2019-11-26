@@ -1,9 +1,9 @@
 <?php
 
-namespace Silverstripe\RSSAggregator;
+namespace SilverStripe\RSSAggregator;
 
 use SilverStripe\ORM\DataObject;
-use Silverstripe\RSSAggregator\RSSAggregationPage;
+use SilverStripe\RSSAggregator\RSSAggregationPage;
 
 class RSSAggSource extends DataObject
 {

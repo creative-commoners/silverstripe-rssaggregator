@@ -1,6 +1,6 @@
 <?php
 
-namespace Silverstripe\RSSAggregator;
+namespace SilverStripe\RSSAggregator;
 
 use EventPage_Image;
 use NewsArticle_ArticleImage;
@@ -8,8 +8,8 @@ use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\ORM\FieldType\DBDate;
-use Silverstripe\RSSAggregator\RSSAggregationPage;
-use Silverstripe\RSSAggregator\RSSAggSource;
+use SilverStripe\RSSAggregator\RSSAggregationPage;
+use SilverStripe\RSSAggregator\RSSAggSource;
 
 class RSSAggEntry extends DataObject
 {

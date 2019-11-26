@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Silverstripe\\RSSAggregator\\": "src"
+      "SilverStripe\\RSSAggregator\\": "src"
     }
   },
   "minimum-stability": "dev"

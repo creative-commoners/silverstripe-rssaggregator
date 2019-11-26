@@ -1,6 +1,6 @@
 <?php
 
-namespace Silverstripe\RSSAggregator;
+namespace SilverStripe\RSSAggregator;
 
 use Page;
 use SilverStripe\CMS\Model\SiteTree;
@@ -13,8 +13,8 @@ use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DB;
-use Silverstripe\RSSAggregator\RSSAggEntry;
-use Silverstripe\RSSAggregator\RSSAggSource;
+use SilverStripe\RSSAggregator\RSSAggEntry;
+use SilverStripe\RSSAggregator\RSSAggSource;
 use SimplePie;
 
 /**
